@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krishna Weds Laxmi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/rings.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      .card {
+        width: 100vw;
+        height: 100vh;
+        background: rgb(20, 50, 100, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="card">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="banner-card">
+              <div class="banner-text">
+                <h4>February 2</h4>
+                <h1>Krishna Chaithanya &</h1>
+                <h1>Laxmi</h1>
+                <p>ARE GETTING MARRIED</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 b-img">
+            <div class="b-img">
+              <img src="img/wedbg.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="container">
+          <div class="wedd text-center my-5">
+            <h3 class="mb-5">The Wedding</h3>
+            <p>
+              Celebrate with us as we declare our love and commitment, taking
+              the first steps into our happily ever after.
+            </p>
+          </div>
+          <div class="info">
+            <div class="row">
+              <div class="col-md-6">
+                <div
+                  class="d-flex justify-content-center align-item-center flex-column"
+                >
+                  <div>
+                    <img src="img/calendar.png" alt="" class="img-fluid" />
+                    <p class="d-inline-block ml-2">February 02, 2024</p>
+                  </div>
+                  <div>
+                    <img src="img/clock.png" alt="" class="img-fluid" />
+                    <p class="d-inline-block ml-2">12:24 PM</p>
+                  </div>
+                  <div>
+                    <img src="img/location.png" alt="" class="img-fluid" />
+                    <p class="d-inline-block ml-2">
+                      Venu : RAJESHWAR BHAVAN, Gokul Road, Hubli,
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 d-flex justify-content-center align-items-center"
+              >
+                <div class="">
+                  <button
+                    type="button"
+                    class="btn map-bt"
+                    data-mdb-ripple-init
+                    onclick="window.open('https://maps.app.goo.gl/ZBxoUzSZjUrqZW5r8', '_blank')"
+                  >
+                    GO TO MAP
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="my-5">
+                    <div id="countdown">
+                      <div>
+                        <span id="days"></span>
+                        <label>Days</label>
+                      </div>
+                      <div>
+                        <span id="hours"></span>
+                        <label>Hours</label>
+                      </div>
+                      <div>
+                        <span id="minutes"></span>
+                        <label>Minutes</label>
+                      </div>
+                      <div>
+                        <span id="seconds"></span>
+                        <label>Seconds</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Set the date we're counting down to
+      var weddingDate = new Date("February 2, 2024 12:24:00").getTime();
+
+      // Update the countdown every 1 second
+      var countdownInterval = setInterval(function () {
+        // Get the current date and time
+        var now = new Date().getTime();
+
+        // Calculate the remaining time
+        var timeRemaining = weddingDate - now;
+
+        // Calculate days, hours, minutes, and seconds
+        var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor(
+          (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // Display the countdown
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+
+        // If the countdown is over, display a message
+        if (timeRemaining < 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").innerHTML = "It's Wedding Time!";
+        }
+      }, 1000); // Update every 1 second
+    </script>
+  </body>
+</html>

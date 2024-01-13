@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.banner-text h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 4em;
+  /* color: rgba(255, 255, 255, 0.9); */
+  color: #fff;
+}
+
+.b-img {
+  position: absolute;
+  right: 0;
+  top: 8%;
+}
+
+.b-img img {
+  height: 500px;
+  margin-right: 50px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+
+.banner-text {
+  position: absolute;
+  top: 25%;
+  color: #fff;
+  padding: 10px;
+  margin-left: 7%;
+}
+
+.banner-text h4 {
+  font-size: 1.728rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  font-family: "Playfair Display", serif;
+}
+
+.banner-text P {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+}
+
+.wedd h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  color: #fff;
+}
+
+.wedd p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  color: #fff;
+}
+
+.info img {
+  height: 30px;
+  filter: brightness(0) invert(1);
+  margin: 10px;
+}
+
+.info p {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.card:first-child {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/mainbg.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.card:nth-child(2) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/beigebg.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.map-bt {
+  width: 120px;
+  height: 50px;
+  color: #fff !important;
+  font-weight: 600px !important;
+  border: 1px#fff solid !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+#countdown {
+  font-size: 2em;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#countdown div {
+  text-align: center;
+}
+
+#countdown span {
+  display: block;
+  font-size: 1.5em;
+}
+
+#countdown label {
+  font-size: 0.8em;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 5px;
+  display: block;
+}
+
+@media only screen and (max-width: 980px) {
+  .b-img img {
+    display: none;
+  }
+
+  #countdown {
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .card:first-child {
+    background-size: cover;
+  }
+
+  .card:nth-child(2) {
+    background-size: cover;
+  }
+
+  #countdown {
+    color: #fff;
+  }
+}
