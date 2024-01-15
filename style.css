@@ -8,9 +8,9 @@
   box-sizing: border-box;
 }
 
-html,
 body {
-  overflow-x: hidden;
+  background-image: url(img/bggg.jpg);
+  background-size: cover;
 }
 
 .banner-text h1 {
@@ -20,21 +20,7 @@ body {
   color: #fff;
 }
 
-.b-img {
-  position: absolute;
-  right: 0;
-  top: 8%;
-}
-
-.b-img img {
-  height: 500px;
-  margin-right: 50px;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
-}
-
 .banner-text {
-  position: absolute;
-  top: 25%;
   color: #fff;
   padding: 10px;
   margin-left: 7%;
@@ -76,20 +62,6 @@ body {
 .info p {
   font-family: "Poppins", sans-serif;
   color: #fff;
-}
-
-.card:first-child {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(img/mainbg.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-.card:nth-child(2) {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(img/beigebg.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 .map-bt {
@@ -135,10 +107,6 @@ body {
 }
 
 @media only screen and (max-width: 980px) {
-  .b-img img {
-    display: none;
-  }
-
   #countdown {
     font-size: 1em;
     color: black;
@@ -149,15 +117,6 @@ body {
     display: flex;
     justify-content: space-around;
   }
-
-  .card:first-child {
-    background-size: cover;
-  }
-
-  .card:nth-child(2) {
-    background-size: cover;
-  }
-
   #countdown {
     color: #fff;
   }
